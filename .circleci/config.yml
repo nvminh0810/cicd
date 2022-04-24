@@ -15,11 +15,11 @@ jobs:
       - docker/check
       - docker/build:
           image: $DOCKER_IMAGE
-          tag: $DOCKER_TAG
+          tag: $IMAGE_TAG
       - docker/push:
           digest-path: /tmp/digest.txt
           image: $DOCKER_IMAGE
-          tag: $DOCKER_TAG
+          tag: $IMAGE_TAG
       - run:
           command: |
             echo "Digest is: $(</tmp/digest.txt)"
