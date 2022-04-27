@@ -29,7 +29,7 @@ jobs:
       - add_ssh_key:
           fingerprints:
             - "bd:2b:f0:7d:27:1a:44:67:3d:c3:e9:63:2e:ef:09:80"
-      - run: ssh -o StrictHostKeyChecking=no parallels@10.211.55.6
+      - run: ssh -o StrictHostKeyChecking=no parallels@10.211.55.6 'cat /etc/os-release'
 workflows:
   pipeline:
     jobs:
